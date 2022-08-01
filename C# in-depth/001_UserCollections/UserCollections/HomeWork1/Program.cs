@@ -8,11 +8,11 @@ namespace HomeWork1
         {
             MonthsCollection months = new MonthsCollection();
 
-            Console.WriteLine(months[4].NameOfMonth);
+            Console.WriteLine(months[4].Name);
 
             foreach (var item in months.GetByDays(31))
             {
-                Console.WriteLine($"In {item.NameOfMonth} - {item.DaysInMonth} days");
+                Console.WriteLine($"In {item.Name} - {item.DaysInMonth} days");
             }
 
             Console.ReadKey();

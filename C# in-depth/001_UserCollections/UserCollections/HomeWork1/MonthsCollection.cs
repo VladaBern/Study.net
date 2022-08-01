@@ -4,28 +4,28 @@ namespace HomeWork1
 {
     internal class MonthsCollection : IMonthsCollection
     {
-        Months[] months = new Months[]
+        Month[] months = new Month[]
         {
-            new Months("January", 31),
-            new Months("February", 28),
-            new Months("March", 31),
-            new Months("April", 30),
-            new Months("May", 31),
-            new Months("June", 30),
-            new Months("July", 31),
-            new Months("August", 31),
-            new Months("September", 30),
-            new Months("October", 31),
-            new Months("November", 30),
-            new Months("December", 31)
+            new Month("January", 31),
+            new Month("February", 28),
+            new Month("March", 31),
+            new Month("April", 30),
+            new Month("May", 31),
+            new Month("June", 30),
+            new Month("July", 31),
+            new Month("August", 31),
+            new Month("September", 30),
+            new Month("October", 31),
+            new Month("November", 30),
+            new Month("December", 31)
         };
 
-        public Months this[int index]
+        public Month this[int index]
         {
             get { return months[index - 1]; }
         }
 
-        public IEnumerable<Months> GetByDays(int days)
+        public IEnumerable<Month> GetByDays(int days)
         {
             foreach (var month in months)
             {
