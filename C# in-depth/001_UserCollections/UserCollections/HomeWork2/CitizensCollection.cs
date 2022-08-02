@@ -56,6 +56,12 @@ namespace HomeWork2
         public Citizen ReturnLast(out int index)
         {
             index = list.Count;
+
+            if (list.Count == 0)
+            {
+                index = -1;
+                return null;
+            }                
             return list[list.Count - 1];
         }
 
