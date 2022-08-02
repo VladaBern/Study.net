@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 namespace HomeWork2
 {
-    internal class CitizensCollection
+    internal class CitizensCollection : IEnumerable<Citizen>
     {
         List<Citizen> list = new List<Citizen>();
 
@@ -68,6 +69,16 @@ namespace HomeWork2
         public void Clear()
         {
             list.Clear();
+        }
+
+        public IEnumerator<Citizen> GetEnumerator()
+        {
+            return list.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }
