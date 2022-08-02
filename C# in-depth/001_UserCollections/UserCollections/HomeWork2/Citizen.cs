@@ -31,5 +31,10 @@
         {
             return passportNumber.GetHashCode();
         }
+
+        public override string ToString()
+        {
+            return $"{this.GetType().Name} {this.passportNumber} {this.name} {this.surname} {this.age}";
+        }
     }
 }
