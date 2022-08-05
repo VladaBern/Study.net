@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTask1", "HomeTask1\HomeTask1.csproj", "{5C01E8CF-A868-4927-A0A6-043BC20F3DC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTask2", "HomeTask2\HomeTask2.csproj", "{0C459BA5-0C82-4EF9-AE45-0522BD4DE26D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5C01E8CF-A868-4927-A0A6-043BC20F3DC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C01E8CF-A868-4927-A0A6-043BC20F3DC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C01E8CF-A868-4927-A0A6-043BC20F3DC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C459BA5-0C82-4EF9-AE45-0522BD4DE26D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C459BA5-0C82-4EF9-AE45-0522BD4DE26D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C459BA5-0C82-4EF9-AE45-0522BD4DE26D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C459BA5-0C82-4EF9-AE45-0522BD4DE26D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
