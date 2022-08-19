@@ -4,9 +4,6 @@ using System.Net;
 using System.Collections.Generic;
 using System.IO;
 
-// Напишите программу, которая бы позволила вам по указанному адресу web-страницы
-// выбирать все ссылки на другие страницы, номера телефонов, почтовые адреса и сохраняла полученный результат в файл. 
-
 namespace HomeTask2
 {
     internal class Program
