@@ -27,12 +27,12 @@ namespace HomeTask2
             {
                 case 1:
                     {
-                        Convertation(assembly, "ConvertToFahrenheit", "F");
+                        Convertation(assembly, "ConvertToFahrenheit");
                         break;
                     }
                 case 2:
                     {
-                        Convertation(assembly, "ConvertToCelsius", "C");
+                        Convertation(assembly, "ConvertToCelsius");
                         break;
                     }
                 default:
@@ -45,7 +45,7 @@ namespace HomeTask2
             Console.ReadKey();
         }
 
-        static void Convertation(Assembly assembly, string operation, string degree)
+        static void Convertation(Assembly assembly, string operation)
         {
             Console.WriteLine("Enter degrees:");
             double degrees = Convert.ToDouble(Console.ReadLine());
@@ -53,7 +53,15 @@ namespace HomeTask2
             object instance = Activator.CreateInstance(type, degrees);
 
             MethodInfo method = type.GetMethod(operation);
-            Console.WriteLine($"Temperature = {method.Invoke(instance, null)} {degree}");
+
+            if (operation == "ConvertToFahrenheit")
+            {
+                Console.WriteLine($"Temperature = {method.Invoke(instance, null)} F");
+            }
+            else
+            {
+                Console.WriteLine($"Temperature = {method.Invoke(instance, null)} C");
+            }
         }
     }
 }
