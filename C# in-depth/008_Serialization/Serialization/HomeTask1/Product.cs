@@ -13,7 +13,7 @@ namespace HomeTask1
         public string color;
         [XmlAttribute]
         public int quantity;
-        [XmlIgnore]
+        [XmlAttribute]
         public decimal total;
 
         public Product() { }

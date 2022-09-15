@@ -20,6 +20,8 @@ namespace HomeTask1
             serializer.Serialize(stream, item);
             Console.WriteLine("Object serialized");
             stream.Close();
+
+            Console.ReadKey();
         }
     }
 }
