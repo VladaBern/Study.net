@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTask", "HomeTask\HomeTask.csproj", "{CCFBCBE1-4325-4B85-A017-0D87FD4F0470}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryInspector", "MemoryInspector\MemoryInspector.csproj", "{F22E02A3-4BF2-46AC-8E0C-CE89AD0A86FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCFBCBE1-4325-4B85-A017-0D87FD4F0470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCFBCBE1-4325-4B85-A017-0D87FD4F0470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCFBCBE1-4325-4B85-A017-0D87FD4F0470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCFBCBE1-4325-4B85-A017-0D87FD4F0470}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F22E02A3-4BF2-46AC-8E0C-CE89AD0A86FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F22E02A3-4BF2-46AC-8E0C-CE89AD0A86FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F22E02A3-4BF2-46AC-8E0C-CE89AD0A86FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F22E02A3-4BF2-46AC-8E0C-CE89AD0A86FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3355A79C-4903-4004-ABAA-56CDED8A4875}
+	EndGlobalSection
+EndGlobal
