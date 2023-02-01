@@ -8,23 +8,23 @@ namespace HomeTask1
         static void Main(string[] args)
         {
             string conStr = @"Data Source=DESKTOP-1LFDLAB; Initial Catalog=GrandSlamDB; Integrated Security=True;";
-            SqlConnection sqlConnection = new SqlConnection(conStr);
-            sqlConnection.Open();
-
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Players", sqlConnection);
-
-            SqlDataReader dataReader = cmd.ExecuteReader();
-
-            while (dataReader.Read())
+            using (SqlConnection sqlConnection = new SqlConnection(conStr))
             {
-                for (int i = 0; i < dataReader.FieldCount; i++)
-                    Console.WriteLine(dataReader.GetName(i) + " : " + dataReader[i]);
+                sqlConnection.Open();
 
-                Console.WriteLine(new string('_', 20));
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Players", sqlConnection);
+
+                using (SqlDataReader dataReader = cmd.ExecuteReader())
+                {
+                    while (dataReader.Read())
+                    {
+                        for (int i = 0; i < dataReader.FieldCount; i++)
+                            Console.WriteLine(dataReader.GetName(i) + " : " + dataReader[i]);
+
+                        Console.WriteLine(new string('_', 20));
+                    }
+                }
             }
-
-            dataReader.Close();
-            sqlConnection.Close();
         }
     }
 }
