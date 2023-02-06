@@ -6,7 +6,7 @@ namespace HomeTask1
 {
     internal class Program
     {
-        private static DataTable CreateSchemaFromReader(SqlDataReader reader, string tableName)
+        private static DataTable CreateDataTable(SqlDataReader reader, string tableName)
         {
             DataTable table = new DataTable(tableName);
 
@@ -16,7 +16,7 @@ namespace HomeTask1
             return table;
         }
 
-        private static void WriteDataFromReader(DataTable table, SqlDataReader reader)
+        private static void WriteDataFromReaderToTable(DataTable table, SqlDataReader reader)
         {
             while (reader.Read())
             {
@@ -41,12 +41,12 @@ namespace HomeTask1
 
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    DataTable table = CreateSchemaFromReader(reader, "PlayerInfos");
+                    DataTable table = CreateDataTable(reader, "PlayerInfos");
 
                     foreach (DataColumn column in table.Columns)
                         Console.WriteLine($"{column.ColumnName} : {column.DataType}");
 
-                    WriteDataFromReader(table, reader);
+                    WriteDataFromReaderToTable(table, reader);
                     Console.WriteLine();
 
                     foreach (DataRow row in table.Rows)
