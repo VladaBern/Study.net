@@ -19,19 +19,7 @@ namespace HomeTask2
 
         public static void LoadWithSchema(DataTable table, SqlDataReader reader)
         {
-            CreateSchemaFromReader(reader, table.TableName);
-
             table.Load(reader);
-        }
-
-        private static DataTable CreateSchemaFromReader(SqlDataReader reader, string tableName)
-        {
-            DataTable table = new DataTable(tableName);
-
-            for (int i = 0; i < reader.FieldCount; i++)
-                table.Columns.Add(new DataColumn(reader.GetName(i), reader.GetFieldType(i)));
-
-            return table;
         }
 
         static void Main(string[] args)
@@ -73,7 +61,7 @@ namespace HomeTask2
             var FK_TeacherExam = new ForeignKeyConstraint(teachers.Columns["Id"], exams.Columns["TeacherId"]);
             exams.Constraints.Add(FK_TeacherExam);
             
-            exams.Rows.Add(15, 369852, 2, 9);
+            exams.Rows.Add(30, 369852, 2, 9);
 
             ShowFromTable(exams);
         }
